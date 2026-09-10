@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"><div class="experience-card">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>FAIRUZ DRONE SERVICES | Professional Drone Services</title>
 
-  <meta name="description" content="Professional drone services for construction, infrastructure, marine and industrial projects.">
+  <meta
+    name="description"
+    content="Professional drone services for construction, infrastructure, marine and industrial projects."
+  >
 
   <style>
     * {
@@ -31,6 +34,10 @@
       color: inherit;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     /* ================= NAVIGATION ================= */
 
     nav {
@@ -38,33 +45,33 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 76px;
-      background: rgba(5, 22, 45, 0.96);
+      height: 82px;
+      background: rgba(5, 22, 45, 0.97);
       backdrop-filter: blur(10px);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 7%;
+      padding: 0 5%;
       z-index: 1000;
     }
 
-    .logo {
-      color: white;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #4da3ff;
+    .logo img {
+      height: 62px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 30px;
       color: white;
       font-size: 14px;
       font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: 0.25s;
     }
 
     .nav-links a:hover {
@@ -73,9 +80,13 @@
 
     .nav-button {
       background: #0b83f6;
-      padding: 11px 20px;
+      padding: 12px 20px;
       border-radius: 6px;
       color: white !important;
+    }
+
+    .nav-button:hover {
+      background: #056bc9;
     }
 
     /* ================= HERO ================= */
@@ -85,12 +96,18 @@
       display: flex;
       align-items: center;
       position: relative;
+
       background:
-        linear-gradient(90deg, rgba(3,18,38,.94), rgba(3,18,38,.65)),
+        linear-gradient(
+          90deg,
+          rgba(3, 18, 38, 0.90),
+          rgba(3, 18, 38, 0.52)
+        ),
         url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85")
         center/cover;
+
       color: white;
-      padding: 120px 7% 80px;
+      padding: 140px 7% 90px;
     }
 
     .hero-content {
@@ -98,7 +115,6 @@
     }
 
     .hero-tag {
-      display: inline-block;
       color: #65b3ff;
       font-size: 14px;
       font-weight: 700;
@@ -135,7 +151,7 @@
       padding: 14px 25px;
       border-radius: 6px;
       font-weight: 700;
-      transition: .25s;
+      transition: 0.25s;
     }
 
     .btn-primary {
@@ -149,7 +165,7 @@
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,.6);
+      border: 1px solid rgba(255, 255, 255, 0.65);
       color: white;
     }
 
@@ -165,7 +181,7 @@
     }
 
     .section-heading {
-      max-width: 700px;
+      max-width: 750px;
       margin-bottom: 50px;
     }
 
@@ -203,12 +219,12 @@
       padding: 35px;
       border-radius: 12px;
       border: 1px solid #e6edf5;
-      transition: .3s;
+      transition: 0.3s;
     }
 
     .service-card:hover {
       transform: translateY(-7px);
-      box-shadow: 0 15px 40px rgba(15,45,80,.1);
+      box-shadow: 0 15px 40px rgba(15, 45, 80, 0.10);
     }
 
     .service-icon {
@@ -250,10 +266,16 @@
     .project-image {
       min-height: 450px;
       border-radius: 14px;
+
       background:
-        linear-gradient(135deg, rgba(4,27,55,.08), rgba(4,27,55,.25)),
+        linear-gradient(
+          135deg,
+          rgba(4, 27, 55, 0.10),
+          rgba(4, 27, 55, 0.18)
+        ),
         url("Wahida.png")
         center/cover;
+
       position: relative;
       overflow: hidden;
     }
@@ -262,7 +284,7 @@
       position: absolute;
       left: 25px;
       bottom: 25px;
-      background: rgba(4,24,48,.9);
+      background: rgba(4, 24, 48, 0.90);
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
@@ -277,7 +299,7 @@
     }
 
     .project-info h2 {
-      font-size: clamp(30px, 4vw, px);
+      font-size: clamp(30px, 4vw, 48px);
       line-height: 1.15;
       margin: 12px 0 20px;
     }
@@ -322,22 +344,31 @@
     }
 
     .experience-card {
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 10px;
-}
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      transition: 0.3s;
+    }
 
-.experience-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    display: block;
+    .experience-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(77, 163, 255, 0.55);
+    }
+
+    .experience-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .experience-card-content {
+      padding: 25px;
     }
 
     .experience-card h3 {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-size: 19px;
     }
 
@@ -371,12 +402,16 @@
       color: #075eb0;
     }
 
+    .cta .btn:hover {
+      transform: translateY(-2px);
+    }
+
     /* ================= FOOTER ================= */
 
     footer {
       background: #031426;
       color: white;
-      padding: px 7%;
+      padding: 45px 7%;
       display: flex;
       justify-content: space-between;
       gap: 30px;
@@ -398,7 +433,12 @@
     @media (max-width: 850px) {
 
       nav {
+        height: 72px;
         padding: 0 5%;
+      }
+
+      .logo img {
+        height: 52px;
       }
 
       .nav-links {
@@ -433,6 +473,10 @@
         min-height: 300px;
       }
 
+      .experience-card img {
+        height: 220px;
+      }
+
       footer {
         flex-direction: column;
       }
@@ -440,13 +484,8 @@
 
     @media (max-width: 480px) {
 
-      .logo {
-        font-size: 16px;
-      }
-
-      .nav-button {
-        padding: 9px 13px;
-        font-size: 12px;
+      .logo img {
+        height: 48px;
       }
 
       .hero h1 {
@@ -469,29 +508,52 @@
       .service-card {
         padding: 27px;
       }
+
+      .project-image {
+        min-height: 260px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ================= NAVIGATION ================= -->
+
   <nav>
+
     <div class="logo">
-      <img src="logo.png" alt="Fairuz Drone Services" style="height:55px; width:auto; display:block;">
+      <img
+        src="logo.png"
+        alt="Fairuz Drone Services"
+      >
     </div>
 
     <div class="nav-links">
+
       <a href="#services">Services</a>
+
       <a href="#projects">Projects</a>
+
       <a href="#experience">Experience</a>
+
       <a href="#contact">Contact</a>
-      <a class="nav-button" href="https://wa.me/60199784616">WhatsApp</a>
+
+      <a
+        class="nav-button"
+        href="https://wa.me/60199784616"
+        target="_blank"
+      >
+        WhatsApp
+      </a>
+
     </div>
+
   </nav>
 
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
+
   <header class="hero">
 
     <div class="hero-content">
@@ -512,13 +574,21 @@
       </p>
 
       <div class="hero-buttons">
-        <a class="btn btn-primary" href="#projects">
+
+        <a
+          class="btn btn-primary"
+          href="#projects"
+        >
           View Our Projects
         </a>
 
-        <a class="btn btn-outline" href="#contact">
+        <a
+          class="btn btn-outline"
+          href="#contact"
+        >
           Get In Touch
         </a>
+
       </div>
 
     </div>
@@ -526,10 +596,15 @@
   </header>
 
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
+  <!-- ================= SERVICES ================= -->
+
+  <section
+    class="services"
+    id="services"
+  >
 
     <div class="section-heading">
+
       <small>OUR SERVICES</small>
 
       <h2>
@@ -541,81 +616,106 @@
         capture, monitor and present your projects
         from a higher perspective.
       </p>
+
     </div>
 
 
     <div class="service-grid">
 
       <div class="service-card">
+
         <div class="service-icon">📷</div>
 
-        <h3>Aerial Photography</h3>
+        <h3>
+          Aerial Photography
+        </h3>
 
         <p>
           High-quality aerial photography for
           construction, property and project
           documentation.
         </p>
+
       </div>
 
 
       <div class="service-card">
+
         <div class="service-icon">🎬</div>
 
-        <h3>Aerial Videography</h3>
+        <h3>
+          Aerial Videography
+        </h3>
 
         <p>
           Professional aerial footage for project
           presentation, marketing and documentation.
         </p>
+
       </div>
 
 
       <div class="service-card">
+
         <div class="service-icon">🏗️</div>
 
-        <h3>Construction Progress</h3>
+        <h3>
+          Construction Progress
+        </h3>
 
         <p>
           Aerial documentation to showcase site
           progress and project development.
         </p>
+
       </div>
 
 
       <div class="service-card">
+
         <div class="service-icon">🌉</div>
 
-        <h3>Infrastructure</h3>
+        <h3>
+          Infrastructure
+        </h3>
 
         <p>
           Drone documentation for roads, bridges,
           rail, earthworks and major infrastructure.
         </p>
+
       </div>
 
 
       <div class="service-card">
+
         <div class="service-icon">🚤</div>
 
-        <h3>Marine & River</h3>
+        <h3>
+          Marine & River
+        </h3>
 
         <p>
           Aerial coverage for marine operations,
           river works, dredging and water-based projects.
         </p>
+
       </div>
 
 
       <div class="service-card">
+
         <div class="service-icon">🏭</div>
 
-        <h3>Industrial & Property</h3>
+        <h3>
+          Industrial & Property
+        </h3>
 
         <p>
           Aerial visuals for industrial facilities,
           commercial properties and project showcases.
         </p>
+
       </div>
 
     </div>
@@ -623,10 +723,15 @@
   </section>
 
 
-  <!-- FEATURED PROJECT -->
-  <section class="featured" id="projects">
+  <!-- ================= FEATURED PROJECT ================= -->
+
+  <section
+    class="featured"
+    id="projects"
+  >
 
     <div class="section-heading">
+
       <small>FEATURED PROJECT</small>
 
       <h2>
@@ -637,21 +742,26 @@
         Real-world aerial documentation for
         construction and marine operations.
       </p>
+
     </div>
 
 
     <div class="project-feature">
 
       <div class="project-image">
+
         <div class="project-label">
           WAHIDA CONSTRUCTION
         </div>
+
       </div>
 
 
       <div class="project-info">
 
-        <small>MARINE RELOCATION PROJECT</small>
+        <small>
+          MARINE RELOCATION PROJECT
+        </small>
 
         <h2>
           Alam Impian → Sg. Rasau
@@ -664,14 +774,32 @@
           of associated components and dredger pipes.
         </p>
 
+
         <ul class="project-list">
-          <li>Aerial site documentation</li>
-          <li>Marine operation coverage</li>
-          <li>Project progress footage</li>
-          <li>Professional aerial photography</li>
+
+          <li>
+            Aerial site documentation
+          </li>
+
+          <li>
+            Marine operation coverage
+          </li>
+
+          <li>
+            Project progress footage
+          </li>
+
+          <li>
+            Professional aerial photography
+          </li>
+
         </ul>
 
-        <a class="btn btn-primary" href="#contact">
+
+        <a
+          class="btn btn-primary"
+          href="#contact"
+        >
           Discuss Your Project
         </a>
 
@@ -682,12 +810,18 @@
   </section>
 
 
-  <!-- PROJECT EXPERIENCE -->
-  <section class="experience" id="experience">
+  <!-- ================= PROJECT EXPERIENCE ================= -->
+
+  <section
+    class="experience"
+    id="experience"
+  >
 
     <div class="section-heading">
 
-      <small>PROJECT EXPERIENCE</small>
+      <small>
+        PROJECT EXPERIENCE
+      </small>
 
       <h2>
         Experience across major projects
@@ -704,49 +838,92 @@
 
     <div class="experience-grid">
 
+
+      <!-- LRT3 -->
+
       <div class="experience-card">
 
-        <img src="lrt3.JPG" alt="LRT3 Project">
+        <img
+          src="lrt3.JPG"
+          alt="LRT3 Project"
+        >
 
-        <h3>Mudajaya Corporation Berhad</h3>
+        <div class="experience-card-content">
 
-        <p>
-          LRT3 Project
-        </p>
+          <h3>
+            Mudajaya Corporation Berhad
+          </h3>
+
+          <p>
+            LRT3 Project
+          </p>
+
+        </div>
 
       </div>
 
 
+      <!-- ECRL -->
+
       <div class="experience-card">
 
-        <h3>Mudajaya Corporation Berhad</h3>
+        <img
+          src="ecrl.JPG"
+          alt="ECRL Project"
+        >
 
-        <p>
-          ECRL Section A Package —
-          Cukai, Kemasik & Dungun
-        </p>
+        <div class="experience-card-content">
+
+          <h3>
+            Mudajaya Corporation Berhad
+          </h3>
+
+          <p>
+            ECRL Section A Package —
+            Cukai, Kemasik & Dungun
+          </p>
+
+        </div>
 
       </div>
 
 
+      <!-- BERJAYA -->
+
       <div class="experience-card">
 
-        <h3>Berjaya Construction</h3>
+        <img
+          src="berjaya.png"
+          alt="Berjaya Construction Project"
+        >
 
-        <p>
-          Klang River deepening, widening,
-          bund and riverbank works.
-        </p>
+        <div class="experience-card-content">
+
+          <h3>
+            Berjaya Construction
+          </h3>
+
+          <p>
+            Klang River deepening, widening,
+            bund and riverbank works.
+          </p>
+
+        </div>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- CTA -->
-  <section class="cta" id="contact">
+  <!-- ================= CTA ================= -->
+
+  <section
+    class="cta"
+    id="contact"
+  >
 
     <h2>
       Have a project in mind?
@@ -757,21 +934,24 @@
       from a higher perspective.
     </p>
 
-    <!-- CHANGE THIS NUMBER TO YOUR REAL WHATSAPP NUMBER -->
+
     <a
       class="btn"
       href="https://wa.me/60199784616"
-      target="_blank">
+      target="_blank"
+    >
       Contact Us on WhatsApp
     </a>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
     <div>
+
       <div class="footer-brand">
         FAIRUZ DRONE SERVICES
       </div>
@@ -780,17 +960,21 @@
         Professional aerial solutions for
         construction, infrastructure & industry.
       </p>
+
     </div>
 
 
     <div>
+
       <p>
         © 2026 Fairuz Drone Services.
         All Rights Reserved.
       </p>
+
     </div>
 
   </footer>
+
 
 </body>
 </html>
