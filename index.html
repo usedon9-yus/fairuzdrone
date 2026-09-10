@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAIRUZ DRONE SERVICES | Professional Drone Services</title>
+
+  <meta name="description" content="Professional drone services for construction, infrastructure, marine and industrial projects.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #10233f;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 76px;
+      background: rgba(5, 22, 45, 0.96);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #4da3ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #4da3ff;
+    }
+
+    .nav-button {
+      background: #0b83f6;
+      padding: 11px 20px;
+      border-radius: 6px;
+      color: white !important;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(3,18,38,.94), rgba(3,18,38,.65)),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      color: white;
+      padding: 120px 7% 80px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      color: #65b3ff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #4da3ff;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: clamp(17px, 2vw, 21px);
+      color: #dce8f5;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: #0b83f6;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #056bc9;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.6);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #10233f;
+    }
+
+    /* ================= GENERAL ================= */
+
+    section {
+      padding: 100px 7%;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading small {
+      color: #0b83f6;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin: 10px 0 15px;
+      line-height: 1.15;
+    }
+
+    .section-heading p {
+      color: #66758a;
+      font-size: 17px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services {
+      background: #f6f9fc;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #e6edf5;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 40px rgba(15,45,80,.1);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf4ff;
+      color: #087cf0;
+      border-radius: 10px;
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #6c7a8c;
+      font-size: 15px;
+    }
+
+    /* ================= FEATURED PROJECT ================= */
+
+    .featured {
+      background: white;
+    }
+
+    .project-feature {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .project-image {
+      min-height: 450px;
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, rgba(4,27,55,.25), rgba(4,27,55,.7)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-label {
+      position: absolute;
+      left: 25px;
+      bottom: 25px;
+      background: rgba(4,24,48,.9);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .project-info small {
+      color: #0b83f6;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .project-info h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.15;
+      margin: 12px 0 20px;
+    }
+
+    .project-info p {
+      color: #657488;
+      margin-bottom: 20px;
+    }
+
+    .project-list {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .project-list li {
+      padding: 7px 0;
+      color: #34465e;
+    }
+
+    .project-list li::before {
+      content: "✓";
+      color: #0b83f6;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* ================= EXPERIENCE ================= */
+
+    .experience {
+      background: #061a32;
+      color: white;
+    }
+
+    .experience .section-heading p {
+      color: #b9c9da;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .experience-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .experience-card h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .experience-card p {
+      color: #b7c6d7;
+      font-size: 14px;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta {
+      background: #0b83f6;
+      color: white;
+      text-align: center;
+      padding: 85px 7%;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #e9f5ff;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #075eb0;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #031426;
+      color: white;
+      padding: 45px 7%;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      color: #91a4b8;
+      font-size: 14px;
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        padding: 0 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 90vh;
+        padding: 110px 6% 70px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 62px);
+        letter-spacing: -1px;
+      }
+
+      section {
+        padding: 75px 6%;
+      }
+
+      .service-grid,
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-feature {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .project-image {
+        min-height: 300px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav-button {
+        padding: 9px 13px;
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        text-align: center;
+      }
+
+      .service-card {
+        padding: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">
+      FAIRUZ <span>DRONE SERVICES</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-button" href="https://wa.me/60123456789">WhatsApp</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        PROFESSIONAL DRONE SERVICES
+      </div>
+
+      <h1>
+        YOUR PROJECT.<br>
+        <span>FROM ABOVE.</span>
+      </h1>
+
+      <p>
+        Professional aerial photography and videography
+        for construction, infrastructure, marine and
+        industrial projects.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#projects">
+          View Our Projects
+        </a>
+
+        <a class="btn btn-outline" href="#contact">
+          Get In Touch
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="section-heading">
+      <small>OUR SERVICES</small>
+
+      <h2>
+        Drone solutions for your project
+      </h2>
+
+      <p>
+        Reliable aerial documentation to help you
+        capture, monitor and present your projects
+        from a higher perspective.
+      </p>
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">📷</div>
+
+        <h3>Aerial Photography</h3>
+
+        <p>
+          High-quality aerial photography for
+          construction, property and project
+          documentation.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🎬</div>
+
+        <h3>Aerial Videography</h3>
+
+        <p>
+          Professional aerial footage for project
+          presentation, marketing and documentation.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+
+        <h3>Construction Progress</h3>
+
+        <p>
+          Aerial documentation to showcase site
+          progress and project development.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🌉</div>
+
+        <h3>Infrastructure</h3>
+
+        <p>
+          Drone documentation for roads, bridges,
+          rail, earthworks and major infrastructure.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🚤</div>
+
+        <h3>Marine & River</h3>
+
+        <p>
+          Aerial coverage for marine operations,
+          river works, dredging and water-based projects.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🏭</div>
+
+        <h3>Industrial & Property</h3>
+
+        <p>
+          Aerial visuals for industrial facilities,
+          commercial properties and project showcases.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED PROJECT -->
+  <section class="featured" id="projects">
+
+    <div class="section-heading">
+      <small>FEATURED PROJECT</small>
+
+      <h2>
+        Project documentation from above
+      </h2>
+
+      <p>
+        Real-world aerial documentation for
+        construction and marine operations.
+      </p>
+    </div>
+
+
+    <div class="project-feature">
+
+      <div class="project-image">
+        <div class="project-label">
+          WAHIDA CONSTRUCTION
+        </div>
+      </div>
+
+
+      <div class="project-info">
+
+        <small>MARINE RELOCATION PROJECT</small>
+
+        <h2>
+          Alam Impian → Sg. Rasau
+        </h2>
+
+        <p>
+          Relocation of CSD BMW02, Workboat 02
+          and 5 speedboats, including dismantling,
+          mobilisation, relocation and reassembly
+          of associated components and dredger pipes.
+        </p>
+
+        <ul class="project-list">
+          <li>Aerial site documentation</li>
+          <li>Marine operation coverage</li>
+          <li>Project progress footage</li>
+          <li>Professional aerial photography</li>
+        </ul>
+
+        <a class="btn btn-primary" href="#contact">
+          Discuss Your Project
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECT EXPERIENCE -->
+  <section class="experience" id="experience">
+
+    <div class="section-heading">
+
+      <small>PROJECT EXPERIENCE</small>
+
+      <h2>
+        Experience across major projects
+      </h2>
+
+      <p>
+        Supporting construction and infrastructure
+        projects with practical site experience and
+        professional aerial documentation.
+      </p>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+      <div class="experience-card">
+
+        <h3>Mudajaya Corporation Berhad</h3>
+
+        <p>
+          LRT3 Project
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <h3>Mudajaya Corporation Berhad</h3>
+
+        <p>
+          ECRL Section A Package —
+          Cukai, Kemasik & Dungun
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <h3>Berjaya Construction</h3>
+
+        <p>
+          Klang River deepening, widening,
+          bund and riverbank works.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+
+    <h2>
+      Have a project in mind?
+    </h2>
+
+    <p>
+      Let us help you capture your project
+      from a higher perspective.
+    </p>
+
+    <!-- CHANGE THIS NUMBER TO YOUR REAL WHATSAPP NUMBER -->
+    <a
+      class="btn"
+      href="https://wa.me/60123456789"
+      target="_blank">
+      Contact Us on WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div>
+      <div class="footer-brand">
+        FAIRUZ DRONE SERVICES
+      </div>
+
+      <p>
+        Professional aerial solutions for
+        construction, infrastructure & industry.
+      </p>
+    </div>
+
+
+    <div>
+      <p>
+        © 2026 Fairuz Drone Services.
+        All Rights Reserved.
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+</html>
